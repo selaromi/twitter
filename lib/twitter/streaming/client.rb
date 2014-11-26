@@ -104,6 +104,11 @@ module Twitter
         end
       end
 
+      # Closes the connection when connected
+      def disconnect
+        @connection.close
+      end
+
     private
 
       def request(method, uri, params)
